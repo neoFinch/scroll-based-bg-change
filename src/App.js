@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
+import First from './components/First';
+import Second from './components/Second';
+import Third from './components/Third';
+import {gsap} from 'gsap/all'
+import AnimationContext from './contexts/animation-context';
 
 function App() {
+
+  const [currentBg, setCurrentBg] = useState('#fff')
+  let appRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(appRef.current, {
+      duration: 1,
+      background: currentBg,
+    })
+  }, [currentBg]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimationContext.Provider value={{ setCurrentBg }}>
+      <div ref={appRef} className="App">
+        <First />
+        <Second />
+        <Third />
+      </div>
+    </AnimationContext.Provider>
   );
 }
 
