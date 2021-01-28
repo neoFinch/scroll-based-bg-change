@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Smooth Background change using React and GSAP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This demo shows smooth background color change on scroll using React and GSAP.
+
+# Preview
+[Imgur](https://i.imgur.com/5cg3Cc7.gifv)
 
 ## Available Scripts
 
