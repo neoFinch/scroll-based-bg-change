@@ -3,7 +3,7 @@
 This demo shows smooth background color change on scroll using React and GSAP.
 
 # Preview
-<img src="https://imgur.com/5cg3Cc7" width="500px" alt="Preview"/>
+<img src="https://i.imgur.com/5cg3Cc7.gif" width="500px" alt="Preview"/>
 
 ## Available Scripts
 
